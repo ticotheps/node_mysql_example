@@ -1,4 +1,3 @@
-const dotenv = require('dotenv');
 const express = require('express');
 const mysql = require('mysql');
 
@@ -6,8 +5,8 @@ const app = express();
 
 const db = mysql.createConnection({
     host: 'localhost',
-    user: 'root',
-    password: process.env.SQL_PASSWORD,
+    user: 'tico',
+    password: '123456',
     database: 'acme'
 });
 
