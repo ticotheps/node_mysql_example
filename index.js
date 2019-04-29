@@ -13,7 +13,7 @@ var db = mysql.createConnection({
 db.connect();
 
 app.get('/users', (req, res) => {
-    const sql = 'SELECT * FROM users';
+    const sql = 'SELECT first_name, last_name, email FROM users ORDER BY last_name';
 
     db.query(sql, (err, result) => {
         if(err) throw err;
