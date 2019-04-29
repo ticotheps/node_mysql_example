@@ -3,7 +3,7 @@ const mysql = require('mysql');
 
 const app = express();
 
-const db = mysql.createConnection({
+var db = mysql.createConnection({
     host: 'localhost',
     user: 'tico',
     password: '123456',
@@ -17,7 +17,7 @@ app.get('/users', (req, res) => {
 
     db.query(sql, (err, result) => {
         if(err) throw err;
-        res.send(results);
+        res.send(result);
     });
 });
 
